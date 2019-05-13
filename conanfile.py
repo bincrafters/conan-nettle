@@ -24,8 +24,8 @@ class NettleConan(ConanFile):
         return "source_subfolder"
 
     def configure(self):
-        if self.settings.compiler == "Visual Studio" and self.settings.os == "Windows":
-            raise ConanInvalidConfiguration("No windows support yet. Sorry. Help a fellow out and contribute back?")
+        if self.settings.os == "Windows":
+            raise ConanInvalidConfiguration("GNU nettle is not supported on Windows")
         del self.settings.compiler.libcxx
 
     def source(self):
