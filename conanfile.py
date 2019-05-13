@@ -40,11 +40,9 @@ class NettleConan(ConanFile):
             self._autotools = AutoToolsBuildEnvironment(self, win_bash=tools.os_info.is_windows)
             config_args = []
             if self.options.shared:
-                config_args.append("--enable-shared")
-                config_args.append("--disable-static")
+                config_args = ["--enable-shared", "--disable-static"]
             else:
-                config_args.append("--enable-static")
-                config_args.append("--disable-shared")
+                config_args = ["--enable-static", "--disable-shared"]
             self._autotools.configure(args=config_args, configure_dir=self._source_subfolder)
         return self._autotools
 
