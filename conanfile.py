@@ -6,7 +6,7 @@ from conans.errors import ConanInvalidConfiguration
 
 class NettleConan(ConanFile):
     name = "nettle"
-    version = "3.4"
+    version = "3.4.1"
     url = "https://github.com/bincrafters/conan-nettle"
     homepage = "https://www.lysator.liu.se/~nisse/nettle"
     description = "The Nettle and Hogweed low-level cryptographic libraries"
@@ -29,7 +29,7 @@ class NettleConan(ConanFile):
         del self.settings.compiler.libcxx
 
     def source(self):
-        sha256 = "ae7a42df026550b85daca8389b6a60ba6313b0567f374392e54918588a411e94"
+        sha256 = "f941cf1535cd5d1819be5ccae5babef01f6db611f9b5a777bae9c7604b8a92ad"
         source_url = "https://ftp.gnu.org/gnu/nettle"
         tools.get("{0}/nettle-{1}.tar.gz".format(source_url, self.version), sha256=sha256)
         extracted_dir = self.name + "-" + self.version
