@@ -10,7 +10,6 @@ class NettleConan(ConanFile):
     homepage = "https://www.lysator.liu.se/~nisse/nettle"
     description = "The Nettle and Hogweed low-level cryptographic libraries"
     license = ("GPL-2.0", "GPL-3.0")
-    author = "Bincrafters <bincrafters@gmail.com>"
     topics = ("conan", "nettle", "crypto", "low-level-cryptographic", "cryptographic")
     settings = "os", "arch", "compiler", "build_type"
     options = {"shared": [True, False], "fPIC": [True, False]}
