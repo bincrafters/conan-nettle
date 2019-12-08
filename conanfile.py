@@ -14,7 +14,7 @@ class NettleConan(ConanFile):
     settings = "os", "arch", "compiler", "build_type"
     options = {"shared": [True, False], "fPIC": [True, False]}
     default_options = {"shared": False, "fPIC": True}
-    requires = 'gmp/6.1.2@bincrafters/stable'
+    requires = 'gmp/6.1.2'
     _autotools = None
 
     @property
